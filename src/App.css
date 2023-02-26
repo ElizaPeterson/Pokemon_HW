@@ -1,5 +1,82 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" 
+);
+
+.App{
+  display: flex;
+  background-color: #f5e87e;
+  padding-bottom: 70px;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+  font-family: 'Ubuntu';
+  column-gap: 70px;
+}
+
+.left-content{
+  width: 50%;
+  text-align: center;
+  color: black;
+  top:100px;
+  display: flex;
+  justify-content: center;
+}
+
+.right-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  color: rgb(76, 76, 76);
+}
+
+.type-list{
+  display: grid;
+  grid-template-columns: 120px 2fr;
+  grid-gap:2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.type-item{
+  width: 75px;
+  height: 35px;
+  background-color: #54a3aa;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  padding: 0 1.5rem;
+  list-style: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.type-link{
+  color: white;
+}
+
+.type-item:hover{
+  cursor: pointer;
+}
+
+.type-details{
+  height: 450px;
+  width: 400px;
+  background-color:#a2d7d4;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  text-transform: capitalize;
+}
+
+.title{
+  padding-bottom: 50px;
+  font-size: 40px;
 }

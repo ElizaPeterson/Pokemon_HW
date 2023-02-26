@@ -12,8 +12,7 @@ const TypeList = ({allPokemonTypes, getTypeData}) => {
 
   return (
     <div>
-      <h2>TypeList</h2>
-      <ul>
+      <ul className="type-list">
         {typeNameNodes}
       </ul>
     </div>

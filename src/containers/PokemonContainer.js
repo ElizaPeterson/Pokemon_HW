@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from "react";
-import Type from "../components/Type";
+import TypeDetails from "../components/TypeDetails";
 import TypeList from "../components/TypeList";
 
 const PokemonContainer = ({allPokemonTypes}) => {
 
   const [pokemonTypeData, setPokemonTypeData] = useState("")
   // const [selectedPokemonType, setSelectedPokemonType] = useState('')
-
-  // useEffect(() => {
-  //   getTypeData(allPokemonTypes[0].url)
-  // })
 
   const getTypeData = (url) => {
     fetch(url)
@@ -21,12 +17,14 @@ const PokemonContainer = ({allPokemonTypes}) => {
   //   setSelectedPokemonType(type);
   // }
 
-
-
   return(
-    <div>
-      <h2>PokemonContainer</h2>
-      <TypeList allPokemonTypes={allPokemonTypes} getTypeData={getTypeData}/>
+    <div className="container">
+      <div className="left-content">
+        <TypeList allPokemonTypes={allPokemonTypes} getTypeData={getTypeData}/>
+      </div>
+      <div className="right-content">
+        <TypeDetails pokemonTypeData={pokemonTypeData}/>
+      </div>
     </div>
   )
 }
