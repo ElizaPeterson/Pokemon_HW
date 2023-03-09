@@ -8,8 +8,8 @@ const Type = ({name, getTypeData, url}) => {
 
   return (
     <div>
-      <li className='type-item'>
-        {<a className='type-link' onClick={handleClick}>{name}</a>}
+      <li className='type-item' onClick={handleClick}>
+        <a className='type-link'>{name}</a>
       </li>
     </div>
   )

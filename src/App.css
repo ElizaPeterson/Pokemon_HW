@@ -4,7 +4,7 @@
 .App{
   display: flex;
   background-color: #f5e87e;
-  padding-bottom: 70px;
+  padding-bottom: 140px;
 }
 
 .container{
@@ -57,6 +57,7 @@
 
 .type-link{
   color: white;
+  width:75px;
 }
 
 .type-item:hover{
@@ -64,7 +65,6 @@
 }
 
 .type-details{
-  height: 450px;
   width: 400px;
   background-color:#a2d7d4;
   border-radius: 20px;
@@ -72,11 +72,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
   text-transform: capitalize;
 }
 
 .title{
-  padding-bottom: 50px;
   font-size: 40px;
+}
+
+.damage-title{
+  margin:5px;
+  font-size: 20px;
+}
+
+.damage-info{
+  font-size: 15px;
+
 }

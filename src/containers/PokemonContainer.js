@@ -4,13 +4,13 @@ import TypeList from "../components/TypeList";
 
 const PokemonContainer = ({allPokemonTypes}) => {
 
-  const [pokemonTypeData, setPokemonTypeData] = useState("")
-  // const [selectedPokemonType, setSelectedPokemonType] = useState('')
+  // const [pokemonTypeData, setPokemonTypeData] = useState("")
+  const [selectedPokemonType, setSelectedPokemonType] = useState(null)
 
   const getTypeData = (url) => {
     fetch(url)
     .then(response => response.json())
-    .then(typeUrlData => setPokemonTypeData(typeUrlData))
+    .then(typeUrlData => setSelectedPokemonType(typeUrlData))
   }
 
   // const handleOnClick = (type) => {
@@ -23,7 +23,7 @@ const PokemonContainer = ({allPokemonTypes}) => {
         <TypeList allPokemonTypes={allPokemonTypes} getTypeData={getTypeData}/>
       </div>
       <div className="right-content">
-        <TypeDetails pokemonTypeData={pokemonTypeData}/>
+        <TypeDetails pokemonTypeData={selectedPokemonType}/>
       </div>
     </div>
   )

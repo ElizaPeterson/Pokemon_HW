@@ -11,7 +11,7 @@ function App() {
   }, [])
 
   const getAllPokemonTypes = () => {
-    fetch("https://pokeapi.co/api/v2/type/")
+    fetch("https://pokeapi.co/api/v2/type?limit=18")
     .then(response => response.json())
     .then(pokemonTypesData => setAllPokemonTypes(pokemonTypesData.results))
   }
